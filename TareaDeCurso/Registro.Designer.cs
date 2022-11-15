@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNombre1 = new System.Windows.Forms.TextBox();
             this.txtApellido1 = new System.Windows.Forms.TextBox();
             this.txtApellido2 = new System.Windows.Forms.TextBox();
             this.txtNombre2 = new System.Windows.Forms.TextBox();
@@ -60,23 +59,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboSexo = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLugar = new System.Windows.Forms.TextBox();
-            this.txtAula = new System.Windows.Forms.TextBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtAula = new System.Windows.Forms.TextBox();
+            this.txtLugar = new System.Windows.Forms.TextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.gpbDatosPersonales.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtNombre1
-            // 
-            this.txtNombre1.Location = new System.Drawing.Point(23, 52);
-            this.txtNombre1.Name = "txtNombre1";
-            this.txtNombre1.Size = new System.Drawing.Size(147, 32);
-            this.txtNombre1.TabIndex = 0;
             // 
             // txtApellido1
             // 
@@ -139,6 +132,7 @@
             // 
             // gpbDatosPersonales
             // 
+            this.gpbDatosPersonales.Controls.Add(this.maskedTextBox1);
             this.gpbDatosPersonales.Controls.Add(this.label15);
             this.gpbDatosPersonales.Controls.Add(this.txtCorreo);
             this.gpbDatosPersonales.Controls.Add(this.label14);
@@ -161,7 +155,6 @@
             this.gpbDatosPersonales.Controls.Add(this.cboEstadoCivil);
             this.gpbDatosPersonales.Controls.Add(this.label5);
             this.gpbDatosPersonales.Controls.Add(this.cboSexo);
-            this.gpbDatosPersonales.Controls.Add(this.txtNombre1);
             this.gpbDatosPersonales.Controls.Add(this.label3);
             this.gpbDatosPersonales.Controls.Add(this.label4);
             this.gpbDatosPersonales.Controls.Add(this.txtApellido1);
@@ -379,45 +372,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Examen de admisión y aptitud";
             // 
-            // txtLugar
+            // btnRegistrar
             // 
-            this.txtLugar.Location = new System.Drawing.Point(217, 49);
-            this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(147, 32);
-            this.txtLugar.TabIndex = 1;
-            // 
-            // txtAula
-            // 
-            this.txtAula.Location = new System.Drawing.Point(410, 49);
-            this.txtAula.Name = "txtAula";
-            this.txtAula.Size = new System.Drawing.Size(147, 32);
-            this.txtAula.TabIndex = 2;
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(23, 49);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(147, 32);
-            this.dtpFecha.TabIndex = 3;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(23, 23);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 23);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Fecha";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(217, 23);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(43, 23);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Lugar";
+            this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrar.Location = new System.Drawing.Point(637, 53);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 28);
+            this.btnRegistrar.TabIndex = 7;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -428,15 +391,53 @@
             this.label18.TabIndex = 6;
             this.label18.Text = "Aula";
             // 
-            // btnRegistrar
+            // label17
             // 
-            this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Location = new System.Drawing.Point(637, 53);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 28);
-            this.btnRegistrar.TabIndex = 7;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(217, 23);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(43, 23);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Lugar";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(23, 23);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(43, 23);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Fecha";
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(23, 49);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(147, 32);
+            this.dtpFecha.TabIndex = 3;
+            // 
+            // txtAula
+            // 
+            this.txtAula.Location = new System.Drawing.Point(410, 49);
+            this.txtAula.Name = "txtAula";
+            this.txtAula.Size = new System.Drawing.Size(147, 32);
+            this.txtAula.TabIndex = 2;
+            // 
+            // txtLugar
+            // 
+            this.txtLugar.Location = new System.Drawing.Point(217, 49);
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(147, 32);
+            this.txtLugar.TabIndex = 1;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(23, 52);
+            this.maskedTextBox1.Mask = "??????????????????????????????????";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(147, 32);
+            this.maskedTextBox1.TabIndex = 30;
             // 
             // Registro
             // 
@@ -457,8 +458,6 @@
         }
 
         #endregion
-
-        private TextBox txtNombre1;
         private TextBox txtApellido1;
         private TextBox txtApellido2;
         private TextBox txtNombre2;
@@ -497,5 +496,6 @@
         private DateTimePicker dtpFecha;
         private TextBox txtAula;
         private TextBox txtLugar;
+        private MaskedTextBox maskedTextBox1;
     }
 }
