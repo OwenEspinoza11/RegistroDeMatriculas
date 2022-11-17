@@ -61,6 +61,7 @@
             this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.txtSexo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lvDatos = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -76,6 +77,7 @@
             this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gpbDatosPersonales.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -98,7 +100,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 259);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 163);
+            this.groupBox1.Size = new System.Drawing.Size(490, 163);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Examen de admisión y aptitud";
@@ -129,7 +131,7 @@
             // btnMostrarDatos
             // 
             this.btnMostrarDatos.ForeColor = System.Drawing.Color.Black;
-            this.btnMostrarDatos.Location = new System.Drawing.Point(686, 53);
+            this.btnMostrarDatos.Location = new System.Drawing.Point(384, 125);
             this.btnMostrarDatos.Name = "btnMostrarDatos";
             this.btnMostrarDatos.Size = new System.Drawing.Size(75, 28);
             this.btnMostrarDatos.TabIndex = 8;
@@ -140,7 +142,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Location = new System.Drawing.Point(605, 53);
+            this.btnRegistrar.Location = new System.Drawing.Point(384, 49);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 28);
             this.btnRegistrar.TabIndex = 7;
@@ -384,12 +386,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lvDatos);
-            this.panel1.Location = new System.Drawing.Point(12, 441);
+            this.panel1.Location = new System.Drawing.Point(12, 428);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 126);
+            this.panel1.Size = new System.Drawing.Size(776, 188);
             this.panel1.TabIndex = 10;
             this.panel1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(679, 155);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Ocultar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lvDatos
             // 
@@ -409,9 +422,9 @@
             this.columnHeader13,
             this.columnHeader14});
             this.lvDatos.GridLines = true;
-            this.lvDatos.Location = new System.Drawing.Point(21, 16);
+            this.lvDatos.Location = new System.Drawing.Point(23, 3);
             this.lvDatos.Name = "lvDatos";
-            this.lvDatos.Size = new System.Drawing.Size(731, 97);
+            this.lvDatos.Size = new System.Drawing.Size(731, 143);
             this.lvDatos.TabIndex = 0;
             this.lvDatos.UseCompatibleStateImageBehavior = false;
             this.lvDatos.View = System.Windows.Forms.View.Details;
@@ -486,12 +499,23 @@
             this.columnHeader14.Text = "Carrera";
             this.columnHeader14.Width = 170;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(508, 272);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 34;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(48)))), ((int)(((byte)(104)))));
-            this.ClientSize = new System.Drawing.Size(800, 588);
+            this.ClientSize = new System.Drawing.Size(800, 623);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpbDatosPersonales);
@@ -556,5 +580,7 @@
         private ColumnHeader columnHeader14;
         private TextBox mtxtFechaExamen;
         private TextBox txtFechaNacimiento;
+        private Button button1;
+        private Button btnSalir;
     }
 }

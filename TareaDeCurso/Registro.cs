@@ -13,7 +13,7 @@ namespace TareaDeCurso
 {
     public partial class Registro : Form
     {
- 
+
 
         public Registro()
         {
@@ -34,7 +34,7 @@ namespace TareaDeCurso
         // Capturar los datos del formulario
         private void CapturaDatos()
         {
-            
+
 
             DatosEstudiante.NTelefono = int.Parse(txtTelefono.Text);
             DatosEstudiante.FechaNacimiento = int.Parse(txtFechaNacimiento.Text);
@@ -70,7 +70,7 @@ namespace TareaDeCurso
 
         private void ImprimirDatos()
         {
-            
+
             ListViewItem fila = new ListViewItem(DatosEstudiante.Nombre.ToString());
             fila.SubItems.Add(DatosEstudiante.Apellido);
             fila.SubItems.Add(DatosEstudiante.Sexo);
@@ -168,6 +168,23 @@ namespace TareaDeCurso
         private void btnMostrarDatos_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult salir = MessageBox.Show("¿Está seguro de salir?", "componentes",
+                                                MessageBoxButtons.YesNo,
+                                                MessageBoxIcon.Question);
+
+            if (salir == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
