@@ -23,18 +23,22 @@ namespace TareaDeCurso
             Application.Exit();
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
+        
+
+
+            private void btnInicio_Click(object sender, EventArgs e)
         {
-            if ((txtUsuario.Text != "") && (txtContraseña.Text != "")) 
+            if ((txtUsuario.Text != "") && (txtContraseña.Text != ""))
+                
             {
-                if ((txtUsuario.Text == "Josthim") && (txtContraseña.Text == "1234"))
+                if ((txtUsuario.Text == "Josthim Hernandez") && (txtContraseña.Text == "1234"))
                 {
                     logeo = new Entrada();
                     logeo.Show();
                     this.Hide();
                 }
 
-                else if ((txtUsuario.Text == "Owen") && (txtContraseña.Text == "4321"))
+                else if ((txtUsuario.Text == "Owen Espinoza") && (txtContraseña.Text == "4321"))
                 {
                     logeo = new Entrada();
                     logeo.Show();
@@ -47,6 +51,7 @@ namespace TareaDeCurso
                     logeo.Show();
                     this.Hide();
                 }
+                
             }
         }
     }
